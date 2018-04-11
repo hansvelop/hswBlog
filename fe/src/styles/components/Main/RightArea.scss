@@ -1,0 +1,18 @@
+.right-area{
+    display: inline-block;
+    position: fixed;
+    width:18rem;
+    margin-left:1.1rem;
+    height:2rem;
+    z-index:$z-index-side-menu;
+    @include media("<table"){
+        display:none;
+    }
+    .item-area{
+        .item-list{
+            .title{
+                font-size:1.2rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,102 @@
+
+.main-warpper{
+    position: relative;
+    top: .5rem;
+    margin: 0 auto;
+    width: 90%;
+    @include media("<desktop"){
+        width: 100%;
+    }
+    @import 'LeftArea';
+    .center-area{
+        margin-left:18rem;
+        width:55%;
+        position: relative;
+        display: inline-block;
+        @include media("<desktop"){
+            margin-left: .5rem;
+            width:67%;
+            float:left;
+        }
+        @include media("<table"){
+            margin-left: 0rem;
+            width: 100%;
+        }
+        @import 'Wirte';
+        .category-area{
+            margin-top: .5rem;
+            background: #fff;
+            box-shadow:0 1px 4px rgba(0,0,0,.04);
+            border: 1px solid rgba(0,0,0,.09);
+            height: 3rem;
+            .category-conent{
+                .category-left-area{
+                    float:left;
+                    .icon{
+                        position:relative;
+                        margin-left:1rem;
+                        margin-right:.5rem;
+                        width:1.5rem;
+                        height:1.5rem;
+                        border-radius: 5px;
+                        top:.4rem;
+                    }
+                    span{
+                        line-height: 3rem;
+                    }
+                }
+                .category-right-area{
+                    float:right;
+                    .search{
+                        line-height: 3rem;
+                        font-size: 1.5rem;
+                        color: $oc-gray-7;
+                        margin-right:.8rem;
+                    }
+                }
+                
+            }
+        }
+        .content-area{
+            margin-top: .5rem;
+            .content-item{
+                background: #fff;
+                box-shadow:0 1px 4px rgba(0,0,0,.04);
+                border: 2px solid rgba(0,0,0,.09);
+                .content-header{
+                    height:3.7rem;
+                    .title{
+                        float: left;
+                        color:#195591;
+                        padding-left:1rem;
+                        line-height: 3rem;
+                        font-size:1.5rem;
+                        font-weight: 500;
+                    }
+                    .date{
+                        color:$oc-gray-6;
+                        font-size:.8rem;
+                        float: right;
+                        padding-right:1rem;
+                        line-height: 3rem;
+                    }
+                }
+                .content-body{
+                    .summary{
+                        margin-left:0rem;
+                        font-size:1.2rem;
+                        color:$oc-gray-6;
+                        padding: 4px 20px;
+                        border-left: 3px solid #4fe654;
+                    }
+                    .content{
+                        padding: 4px 20px;
+                    }
+
+                }
+
+            }
+        }
+    }
+    @import 'RightArea';
+}

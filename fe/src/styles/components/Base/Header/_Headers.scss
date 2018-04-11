@@ -1,0 +1,148 @@
+.header-warper{
+    background-color:#fff;
+    height: 4rem;
+    box-shadow:0 2px 4px rgba(0,0,0,.14);
+    width: 100%;
+    position: fixed;
+    z-index: $z-index-header;
+    .header{
+        margin: 0 auto;
+        height:4rem;
+        padding-left:1.5rem;
+        padding-right:1.5rem;
+        width: 1000px;
+        .logo {
+            line-height: 4rem;
+            font-size:1.5rem;
+            font-weight: 800;
+            color: $oc-gray-8;
+            display: inline-block;
+            user-select: none;
+            color: #5CAD74;
+        }
+        .login-btn-area{
+            float: right;
+            line-height: 4rem;
+            .auth-button {
+                Icon {
+                    margin-right: 0.5rem;
+                    font-size:2rem; 
+                }
+                display: inline-block;
+                position: relative;
+                background-color: #5CAD74;
+                color: white;
+                font-weight: bold;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                padding-top: 0.7rem;
+                padding-bottom: 0.7rem;
+                line-height: 1rem;
+                border-radius: 4px;
+                transition: background .3s;
+                cursor: pointer;
+                user-select: none;
+                &:hover {
+                    background: #4a8b5e;
+                }
+                &:active{
+                    background: #417b52;
+                }
+            }
+        }
+        .sidebar-button {
+            float: left; 
+            font-size: 1.6rem;
+            line-height: 4rem;
+            color: $oc-gray-7;
+            margin-right: 0.5rem;
+            //transition: all .4s;
+            cursor:pointer;
+            &:hover {
+                color: $oc-blue-6;
+            //    font-size:1.7rem;
+            }
+            @include media(">desktop"){
+                display:none;
+            }
+        }
+        .user-info-area{
+            right:3rem;
+            float: right;
+            user-select: none;
+            position:relative;
+            cursor: pointer;
+            .photo-area {
+                img{ 
+                    top: 0.5rem;
+                    display: inline-block;
+                    position: absolute;
+                    line-height: 1rem;
+                    border-radius: 20px;
+                    width: 3rem;
+                    height: 3rem;
+                    transition: all 0.2s;
+                    &:hover{
+                        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.16);
+                    }
+                }
+            }
+            .user-menu-area{
+                .menu-list{
+                    z-index: $z-index-tooltip;
+                    position: absolute;
+                    top:4.2rem;
+                    left:-5.1rem;
+                    width: 8rem;
+                    line-height: 20px;
+                    padding: 0px;
+                    font-size: 14px;
+                    text-align: center;
+                    background: rgb(255, 255, 255);
+                    border-radius: 0.2rem;
+                    text-shadow: rgba(0, 0, 0, 0.0980392) 1px 1px 1px;
+                    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+                    .menu-item{
+                        margin:0;
+                        padding-top: 0.2rem;
+                        padding-bottom: 0.2rem;
+                        border-bottom: 1px dotted $oc-gray-4;
+                        transition: all 0.2s;
+                        border-radius: 0.2rem;
+                        &:hover{
+                            background: $oc-gray-1;
+                        }
+                    }
+                }
+                .menu-list:after {
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    border-width: 10px;
+                    border-style: solid;
+                    border-color: transparent transparent #aababb transparent;
+                    top: -1.37rem;
+                    left: 6.1rem;
+                }
+                //애니메이션 설정
+                &.flipInY, &.flipOutY{
+                    -webkit-animation-duration: 0.8s;
+                    animation-duration: 0.8s;
+                    -webkit-animation-fill-mode: both;
+                    animation-fill-mode: both;
+                }
+            }
+        }
+}
+
+    @include media("<desktop"){
+        .header{
+            width:100%;
+        }
+    }
+}
+.header-spacer{
+    height:4rem;
+    width:100%;
+}

@@ -1,0 +1,56 @@
+.left-area{
+    position: fixed;
+    padding:0.5rem;
+    width:17rem;
+    height:3rem;
+    display: inline-block;
+    z-index:$z-index-side-menu;
+    @include media("<desktop"){
+        display:none;
+    }
+    .menu-title{
+        font-size:1.2rem;
+        color: $oc-blue-9;
+        margin-bottom: 1rem;
+    }
+    .menu-list-area{
+        .category-area{
+            .sub-category{
+                width:100%;
+                border-bottom: .15rem solid $oc-gray-4;
+                .name{
+                    margin-left: .3rem;
+                    font-size: 1rem;
+                    color: $oc-gray-6;
+                }
+            }
+            .menu-list{
+                .menu-item{
+                    border-radius: 5px;
+                    cursor:pointer;
+                    padding-left:.8rem;
+                    height:2.5rem;
+                    .icon{
+                        position:relative;
+                        top:.4rem;
+                        border-radius:5px;
+                        width:1.7rem;
+                        height:1.7rem;
+                        margin-right: .4rem;
+                    }
+                    span{
+                        line-height: 2.5rem;
+                        font-size:1.2rem;
+                    }
+                    &:hover{
+                        background: #effcf2;
+                    }
+                    &:active{
+                        background: #e7ffee;
+                    }
+                }
+            }
+        }
+        
+    }
+}
